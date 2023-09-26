@@ -1,0 +1,81 @@
+= Video Channel API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+
+
+== 비디오 채널 생성
+
+=== Request
+
+include::{snippets}/video-channel-create/http-request.adoc[]
+include::{snippets}/video-channel-create/path-parameters.adoc[]
+include::{snippets}/video-channel-create/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/video-channel-create/http-response.adoc[]
+include::{snippets}/video-channel-create/request-fields.adoc[]
+
+
+
+== 비디오 채널 전체 조회
+
+=== Request
+
+include::{snippets}/video-channel-find-all/http-request.adoc[]
+include::{snippets}/video-channel-find-all/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/video-channel-find-all/http-response.adoc[]
+include::{snippets}/video-channel-find-all/response-fields.adoc[]
+
+
+
+== 비디오 채널 상세 조회
+
+=== Request
+
+include::{snippets}/video-channel-find-by-id/http-request.adoc[]
+include::{snippets}/video-channel-find-by-id/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/video-channel-find-by-id/http-response.adoc[]
+include::{snippets}/video-channel-find-by-id/response-fields.adoc[]
+
+
+
+== 비디오 채널 수정
+
+=== Request
+
+include::{snippets}/video-channel-modify/http-request.adoc[]
+include::{snippets}/video-channel-modify/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/video-channel-modify/http-response.adoc[]
+include::{snippets}/video-channel-modify/response-fields.adoc[]
+
+
+
+== 비디오 채널 삭제
+
+=== Request
+
+include::{snippets}/video-channel-delete/http-request.adoc[]
+include::{snippets}/video-channel-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/video-channel-delete/http-response.adoc[]

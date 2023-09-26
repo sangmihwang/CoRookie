@@ -1,0 +1,53 @@
+= Project Member API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+
+
+== 프로젝트 멤버 등록
+
+=== Request
+
+include::{snippets}/projectmember-create/http-request.adoc[]
+
+include::{snippets}/projectmember-create/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/projectmember-create/http-response.adoc[]
+
+include::{snippets}/projectmember-create/response-fields.adoc[]
+
+== 프로젝트 멤버 조회
+
+=== Request
+
+include::{snippets}/projectmember-list/http-request.adoc[]
+
+include::{snippets}/projectmember-list/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/projectmember-list/http-response.adoc[]
+
+include::{snippets}/projectmember-list/response-fields.adoc[]
+
+== 프로젝트 멤버 탈퇴
+
+=== Request
+
+include::{snippets}/projectmember-delete/http-request.adoc[]
+
+include::{snippets}/projectmember-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/projectmember-delete/http-response.adoc[]

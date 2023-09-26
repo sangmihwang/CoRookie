@@ -1,0 +1,81 @@
+= Text Channel API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+
+
+== 텍스트 채널 생성
+
+=== Request
+
+include::{snippets}/text-channel-create/http-request.adoc[]
+include::{snippets}/text-channel-create/path-parameters.adoc[]
+include::{snippets}/text-channel-create/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/text-channel-create/http-response.adoc[]
+include::{snippets}/text-channel-create/request-fields.adoc[]
+
+
+
+== 텍스트 채널 전체 조회
+
+=== Request
+
+include::{snippets}/text-channel-find-all/http-request.adoc[]
+include::{snippets}/text-channel-find-all/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/text-channel-find-all/http-response.adoc[]
+include::{snippets}/text-channel-find-all/response-fields.adoc[]
+
+
+
+== 텍스트 채널 상세 조회
+
+=== Request
+
+include::{snippets}/text-channel-find-by-id/http-request.adoc[]
+include::{snippets}/text-channel-find-by-id/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/text-channel-find-by-id/http-response.adoc[]
+include::{snippets}/text-channel-find-by-id/response-fields.adoc[]
+
+
+
+== 텍스트 채널 수정
+
+=== Request
+
+include::{snippets}/text-channel-modify/http-request.adoc[]
+include::{snippets}/text-channel-modify/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/text-channel-modify/http-response.adoc[]
+include::{snippets}/text-channel-modify/response-fields.adoc[]
+
+
+
+== 텍스트 채널 삭제
+
+=== Request
+
+include::{snippets}/text-channel-delete/http-request.adoc[]
+include::{snippets}/text-channel-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/text-channel-delete/http-response.adoc[]

@@ -1,0 +1,146 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'org.asciidoctor.jvm.convert' version '3.3.2'
+	id 'jacoco'
+}
+
+group = 'com.fourttttty'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+
+configurations {
+	asciidoctorExtensions
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+ext {
+	set('snippetsDir', file("build/generated-snippets"))
+}
+
+asciidoctor {
+	inputs.dir snippetsDir
+	dependsOn test
+	configurations 'asciidoctorExtensions'
+}
+
+asciidoctor.doFirst {
+	delete file('src/main/resources/static/docs')
+}
+
+bootJar {
+	dependsOn asciidoctor
+	from ("${asciidoctor.outputDir}/html5") {
+		into 'BOOT-INF/classes/static/docs'
+	}
+}
+
+tasks.register('copyDocument', Copy) {
+	dependsOn asciidoctor
+
+	from file("build/docs/asciidoc")
+	into file("src/main/resources/static/docs")
+}
+
+build {
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client:2.6.2'
+
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+    implementation 'org.projectlombok:lombok:1.18.20'
+
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	outputs.dir snippetsDir
+	useJUnitPlatform()
+	finalizedBy jacocoTestReport
+
+	jacoco {
+		destinationFile = file("$buildDir/jacoco/jacoco.exec")
+	}
+}
+
+jacoco {
+	toolVersion '0.8.10'
+}
+
+jacocoTestReport {
+	dependsOn test
+	reports {
+		html.required = true
+		xml.required = false
+		csv.required = false
+
+		html.outputLocation = file("$buildDir/jacocoHtml")
+	}
+	finalizedBy jacocoTestCoverageVerification
+}
+
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+//			enabled = true
+//			element = 'CLASS'
+//
+//			limit {
+//				counter = 'BRANCH'
+//				value = 'COVEREDRATIO'
+//				minimum = 0.20
+//			}
+//
+//			limit {
+//				counter = "LINE"
+//				value = "COVEREDRATIO"
+//				minimum = 0.20
+//			}
+//
+//			limit {
+//				counter = "METHOD"
+//				value = 'COVEREDRATIO'
+//				minimum = 0.20
+//			}
+
+
+			excludes = ['*.Application',
+						'com.fourttttty.corookie.global.**',
+						'com.fourttttty.corookie.config.**'
+			]
+		}
+	}
+}

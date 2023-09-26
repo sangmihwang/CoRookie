@@ -1,0 +1,43 @@
+= Corookie API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+= 프로젝트
+
+include::{docdir}/src/docs/asciidoc/project.adoc[]
+
+= 프로젝트 멤버
+
+include::{docdir}/src/docs/asciidoc/project-member.adoc[]
+
+= 이슈
+
+include::{docdir}/src/docs/asciidoc/issue.adoc[]
+
+= 일정
+
+include::{docdir}/src/docs/asciidoc/plan.adoc[]
+
+= 일정에 있는 카테고리
+
+include::{docdir}/src/docs/asciidoc/category-in-plan.adoc[]
+
+= 일정 카테고리
+
+include::{docdir}/src/docs/asciidoc/plan-category.adoc[]
+
+= 텍스트 채널
+
+include::{docdir}/src/docs/asciidoc/text-channel.adoc[]
+
+= 스레드
+
+include::{docdir}/src/docs/asciidoc/thread.adoc[]
+
+= 댓글
+
+include::{docdir}/src/docs/asciidoc/comment.adoc[]

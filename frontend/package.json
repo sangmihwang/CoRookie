@@ -1,0 +1,99 @@
+{
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^13.0.0",
+        "@testing-library/user-event": "^13.2.1",
+        "axios": "^1.4.0",
+        "gsap": "^3.12.2",
+        "pixi.js": "^7.2.4",
+        "prismjs": "^1.29.0",
+        "react": "^18.2.0",
+        "react-beautiful-dnd": "^13.1.1",
+        "react-calendar": "^4.6.0",
+        "react-colorful": "^5.6.1",
+        "react-dom": "^18.2.0",
+        "react-gsap": "^3.2.1",
+        "react-intersection-observer": "^9.5.2",
+        "react-landing-page": "^2.0.2",
+        "react-responsive-carousel": "^3.2.23",
+        "react-scripts": "5.0.1",
+        "react-transition-group": "^4.4.5",
+        "rebass": "^4.0.7",
+        "serve": "^14.2.0",
+        "socks-client": "^1.1.4",
+        "styled-components": "^6.0.4",
+        "swiper": "6.8.4",
+        "tachyons": "^4.12.0",
+        "web-vitals": "^2.1.0",
+        "zustand": "^4.3.9"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack-dev-server --mode development",
+        "start:dev": "set HTTPS=true&&set SSL_CRT_FILE=cert.pem&&set SSL_KEY_FILE=key.pem&&webpack-dev-server --mode development --env dev",
+        "start:prd": "webpack-dev-server --mode production --env prd",
+        "build": "webpack",
+        "build:dev": "webpack --mode development --env dev",
+        "build:prd": "webpack --mode production --env prd"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.22.9",
+        "@babel/core": "^7.22.9",
+        "@babel/plugin-transform-runtime": "^7.22.9",
+        "@babel/preset-env": "^7.22.9",
+        "@babel/preset-react": "^7.22.5",
+        "@babel/runtime-corejs3": "^7.22.6",
+        "@stomp/stompjs": "^7.0.0",
+        "aws-sdk": "^2.1435.0",
+        "babel-loader": "^9.1.3",
+        "babel-plugin-module-resolver": "^5.0.0",
+        "babel-plugin-styled-components": "^2.1.4",
+        "css-loader": "^6.8.1",
+        "date-fns": "^2.30.0",
+        "dotenv-webpack": "^8.0.1",
+        "file-loader": "^6.2.0",
+        "html-loader": "^4.2.0",
+        "html-webpack-plugin": "^5.5.3",
+        "lodash": "^4.17.21",
+        "prettier": "^3.0.0",
+        "react-calendar": "^4.6.0",
+        "react-cookie": "^4.1.1",
+        "react-datepicker": "^4.16.0",
+        "react-dnd": "^16.0.1",
+        "react-dnd-html5-backend": "^16.0.1",
+        "react-icons": "^4.10.1",
+        "react-router-dom": "^6.14.2",
+        "react-spinners": "^0.13.8",
+        "react-uuid": "^2.0.0",
+        "sockjs-client": "^1.6.1",
+        "stompjs": "^2.3.3",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1",
+        "zustand": "^4.3.9"
+    }
+}

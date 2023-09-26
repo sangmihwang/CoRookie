@@ -1,0 +1,52 @@
+= Thread API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+
+
+== 스레드 이모지 정보 조회
+
+=== Request
+
+include::{snippets}/threademoji-list/http-request.adoc[]
+include::{snippets}/threademoji-list/path-parameters.adoc[]
+include::{snippets}/threademoji-list/response-fields.adoc[]
+
+=== Response
+include::{snippets}/threademoji-list/http-response.adoc[]
+include::{snippets}/threademoji-list/response-fields.adoc[]
+
+
+
+== 스레드 이모지 추가
+
+=== Request
+
+include::{snippets}/threademoji-create/http-request.adoc[]
+include::{snippets}/threademoji-create/request-body.adoc[]
+
+=== Response
+
+include::{snippets}/threademoji-create/http-response.adoc[]
+include::{snippets}/threademoji-create/response-fields.adoc[]
+
+
+
+== 스레드 이모지 제거
+
+=== Request
+
+include::{snippets}/threademoji-delete/http-request.adoc[]
+include::{snippets}/threademoji-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/threademoji-delete/http-response.adoc[]

@@ -1,0 +1,51 @@
+= Plan Category API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+== 카테고리 조회
+
+=== Request
+
+include::{snippets}/category-list/http-request.adoc[]
+
+include::{snippets}/category-list/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/category-list/http-response.adoc[]
+
+include::{snippets}/category-list/response-fields.adoc[]
+
+== 카테고리 생성
+
+=== Request
+
+include::{snippets}/category-create/http-request.adoc[]
+
+include::{snippets}/category-create/path-parameters.adoc[]
+
+include::{snippets}/category-create/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/category-create/http-response.adoc[]
+
+include::{snippets}/category-create/response-fields.adoc[]
+
+== 카테고리 삭제
+
+include::{snippets}/category-delete/http-request.adoc[]
+
+include::{snippets}/category-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/category-delete/http-response.adoc[]

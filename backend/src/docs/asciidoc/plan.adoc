@@ -1,0 +1,106 @@
+= Plan API
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+
+== 월 별 캘린더 일정 조회
+
+=== Request
+
+include::{snippets}/plan-list/http-request.adoc[]
+
+include::{snippets}/plan-list/path-parameters.adoc[]
+
+include::{snippets}/plan-list/query-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/plan-list/http-response.adoc[]
+
+include::{snippets}/plan-list/response-fields.adoc[]
+
+
+== 일정 생성
+
+=== Request
+
+include::{snippets}/plan-create/http-request.adoc[]
+
+include::{snippets}/plan-create/path-parameters.adoc[]
+
+include::{snippets}/plan-create/request-fields.adoc[]
+
+=== response
+
+include::{snippets}/plan-create/http-response.adoc[]
+
+include::{snippets}/plan-create/response-fields.adoc[]
+
+
+== 일정 상세 조회
+
+=== Request
+
+include::{snippets}/plan-Detail/http-request.adoc[]
+
+include::{snippets}/plan-Detail/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/plan-Detail/http-response.adoc[]
+
+include::{snippets}/plan-Detail/response-fields.adoc[]
+
+
+== 일정 수정
+
+=== Request
+
+include::{snippets}/plan-update/http-request.adoc[]
+
+include::{snippets}/plan-update/path-parameters.adoc[]
+
+include::{snippets}/plan-update/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/plan-update/http-response.adoc[]
+
+include::{snippets}/plan-update/response-fields.adoc[]
+
+
+== 일정 삭제
+
+=== Request
+
+include::{snippets}/plan-delete/http-request.adoc[]
+
+include::{snippets}/plan-delete/path-parameters.adoc[]
+
+=== Response
+
+include::{snippets}/plan-delete/http-response.adoc[]
+
+== 일정 관련자 추가
+
+=== Request
+
+include::{snippets}/planMember-create/http-request.adoc[]
+
+include::{snippets}/planMember-create/path-parameters.adoc[]
+
+include::{snippets}/planMember-create/request-fields.adoc[]
+
+=== Response
+
+include::{snippets}/planMember-create/http-response.adoc[]
+
+include::{snippets}/planMember-create/response-fields.adoc[]
